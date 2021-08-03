@@ -9,6 +9,19 @@ Jei pirkejas duoda per didele pinigu suma, kasininkas sako: "Aciu, jog pirkote! 
 const kasininkas = require('./kasininkas');
 
 (async () => {
+
+
+    const a = await kasininkas(100, [20, 50]);
+    console.log(a);
+
+    const b = await kasininkas(100, [20, 50, 20, 10, 5, 5]);
+    console.log(b);
+
+    const c = await kasininkas(100, [50, 20, 10, 5, 5, 1]);
+    console.log(c);
+
+
+
     // Reikia patiems iskviesti funkcija ir jai duoti tokias reiksmes:
     // a) kaina: 100; kupiuros: [20, 50]
     // b) kaina: 100; kupiuros: [20, 50, 20, 10, 5, 5]
